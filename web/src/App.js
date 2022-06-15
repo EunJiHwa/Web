@@ -1,45 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+// components : HTML에 엘레멘트를 오직 VIEW를 해주기 위한 컴포넌트 단위로 구성한 폴더
+import TodoList from "./containers/Todo";
 
-function Header(){
-  return <header>
-    <h1><a href="/">WEB</a></h1>
-  </header>
+// export : 내보내기 < -> import : 불러오기
+// export default : 하나의 모듈 당 한개를 정의한 함수를 사용한다.
+// export names : 하나의 모듈 당 여려개를 정의한 함수를 사용한다.
+const App = () => {
+  return<TodoList />;
 
-}
-
-function Nav(){
-  return <nav>
-    <ol>
-      <li><a href="/read/1"> html </a></li>
-    </ol>
-  </nav>
-
-}
-
-function Article(){
-  return <article>
-      <h2>Welcome</h2>
-      Hello, web
-    </article>
-
-}
-
-
-function App() {
-  return (
-    //layout/진입점
-    //header main 공통(common) =>같은 선상
-    //main안에 폴더(회원가입,로그인,,,) => 페이지 그리기
-    //회원가입 안에 목적단위
-    //버튼도 따로=> 공통이면 공통영역으로
-    <div>
-    <Header></Header>
-    <Nav></Nav>
-    <Article></Article>
-    </div>
-    //layout 영역 생성 후 안에 header 등...
-  );
-}
+};
 
 export default App;
